@@ -8,9 +8,89 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <title>PSIS - Apresentação</title>
 </head>
-<body>
-  <h1>Página de apresentação do PSIS</h1>
-</body>
+<body id="body">
+  
+  <!--------------------------------------------------------NAVBAR------------------------------------------------------------>
+
+  <nav>
+    <img src="assets/images/PSIS-Logo-Transparente.png" />
+    <div class="container">
+      <ul>
+        <li class="home active"><a href="#home">Introdução</a></li>
+        <li class="problem"><a href="#problem">Problema</a></li>
+        <li class="code"><a href="#code">Código</a></li>
+        <li class="video"><a href="#video">Vídeo</a></li>
+        <li class="bibliography"><a href="#bibliography">Referências</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+
+    <section id="home">
+      <div class="homeContainer">
+        <div class="homeLeft">
+          <div class="titleAndImage">
+            <div>
+              <img src="assets/images/PSIS-Logo-Invertido-Transparente.png" />
+            </div>
+            <h1>Patient & Scheduling Information System</h1>
+          </div>
+          <div class="introText">
+            <p>
+              Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
+              <span>Rastreabilidade</span> completa de funcionários e pacientes.
+              Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
+              <span>Rastreabilidade</span> completa de funcionários e pacientes.
+              Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
+              <span>Rastreabilidade</span> completa de funcionários e pacientes.
+            </p>
+
+          </div>
+        </div>
+        <div class="homeRight">
+          <img  src="assets/images/web-mobile-screen.png" />
+
+        </div>
+      </div>
+    </section>
+
+
+    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+
+    <section id="problem">
+      <div class="homeContainer2">
+        <div class="homeLeft">
+          <p id="title" class="title">Introdução 2</p>
+          <p>
+            Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+
+    <section id="code">
+      <div class="homeContainer">
+        <div class="homeLeft">
+          <p id="title" class="title">Introdução 2</p>
+          <p>
+            Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!----------------------------------------------------------PDF----------------------------------------------------------------->
+
+  <!-- <embed src= "assets/docs/PSIS-Projeto.pdf" width= "500" height= "375"> -->
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
