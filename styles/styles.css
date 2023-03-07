@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins';
+  font-size: 93.75% ;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color:  #282a36;
+  border-left: .5px solid #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-left: .5px solid #000;
+}
