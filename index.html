@@ -21,7 +21,7 @@
       <ul>
         <li class="home active"><a href="#home">Introdução</a></li>
         <li class="problem"><a href="#problem">Problema</a></li>
-        <li class="code"><a href="#code">Código</a></li>
+        <li class="images"><a href="#images">Código</a></li>
         <li class="video"><a href="#video">Vídeo</a></li>
         <li class="bibliography"><a href="#bibliography">Referências</a></li>
       </ul>
@@ -34,10 +34,12 @@
       <div class="homeContainer">
         <div class="homeLeft">
           <div class="titleAndImage">
-            <div>
+            <div class="leftImage">
               <img src="assets/images/PSIS-Logo-Invertido-Transparente.png" />
             </div>
-            <h1>Patient & Scheduling Information System</h1>
+            <div class="leftTitle">
+              <h1>Patient & Scheduling Information System</h1>
+            </div>
           </div>
           <div class="introText">
             <p>
@@ -75,14 +77,44 @@
 
     <!---------------------------------------------------------HOME----------------------------------------------------------------->
 
-    <section id="code">
-      <div class="homeContainer">
-        <div class="homeLeft">
-          <p id="title" class="title">Introdução 2</p>
-          <p>
-            Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
-          </p>
-        </div>
+    <section id="images">
+      <div class="imagesContainer">
+        <h1 class="imagesTitle">Interfaces</h1>
+        <div class="slideshow-container fade">
+          
+          <div>
+
+              <div class="Containers">
+                <div class="MessageInfo"><h4>1 / 3</h4></div>
+                <img src="assets/images/web-login.png" style="width:100%">
+                <div class="Info"><h4>Tela de Login</h4></div>
+              </div>
+            
+              <div class="Containers">
+                <div class="MessageInfoInv"><h4>2 / 3</h4></div>
+                <img src="assets/images/web-patients.png" style="width:100%">
+                <div class="Info"><h4>Tela de pacientes</h4></div>
+              </div>
+            
+              <div class="Containers">
+                <div class="MessageInfoInv"><h4>3 / 3</h4></div>
+                <img src="assets/images/web-profile.png" style="width:100%">
+                <div class="Info"><h4>Tela dos horários do profissional</h4></div>
+              </div>
+            
+              <!-- Back and forward buttons -->
+              <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The circles/dots -->
+            <div style="text-align:center">
+              <span class="dots" onclick="currentSlide(1)"></span>
+              <span class="dots" onclick="currentSlide(2)"></span>
+              <span class="dots" onclick="currentSlide(3)"></span>
+            </div> 
+          </div>
       </div>
     </section>
 

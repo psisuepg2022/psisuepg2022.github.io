@@ -49,7 +49,7 @@ body {
 }
 
 
-section {
+section:not(#images) {
   height: 100%;
   width: 100%;
   display: flex;
@@ -58,6 +58,7 @@ section {
   background: transparent;
   justify-self: center;
 }
+
 
 nav {
   position: sticky;
@@ -140,7 +141,7 @@ nav .container ul li.active a {
   padding-top: 60px;
   display: flex;
   height: calc(100vh - 60px) !important;
-  width: 100%;
+  max-width: 90%;
   justify-content: center;
   align-items: center;
   gap: 5rem;
@@ -161,7 +162,7 @@ nav .container ul li.active a {
   justify-content: center;
   align-items: center;
   align-self: center;
-  width: 90%;
+  width: 100%;
   gap: 2rem;
 }
 
@@ -183,6 +184,16 @@ nav .container ul li.active a {
 .titleAndImage img {
   height: 250px;
   width: auto;
+}
+
+.leftImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.leftTitle {
+  flex: 1;
 }
 
 .homeRight{
@@ -238,4 +249,147 @@ nav .container ul li.active a {
   align-items: center;
   justify-content: space-around;
   gap: 10rem;
+}
+
+
+/********************************************************* IMAGES *******************************************************************/
+
+#images {
+  height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+* {box-sizing:border-box}
+
+.imagesContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.imagesTitle {
+  font-size: 3rem;
+  color: var(--primary);
+  font-weight: 300;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.48);
+
+  background: transparent;
+}
+
+/* forward & Back buttons */
+.back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  background-color: #FFF;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.back:hover, .forward:hover {
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.30);
+}
+
+/* Caption Info */
+.Info {
+  color: var(--primary);
+  font-size: 2rem;
+  padding: 10px 14px;
+  position: absolute;
+  top: -70px;
+  width: 100%;
+  text-align: center;
+}
+
+.Info h4 {
+  /* background-color: #FFF; */
+  display: inline;
+  font-weight: 500;
+  padding: 0 10px;
+  border-radius: 3px;
+  /* box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.30); */
+
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+  color: var(--primary);
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+  font-weight: 500;
+}
+
+.MessageInfoInv {
+  color: #FFF;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  font-weight: 500;
+  top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: var(--lock);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: var(--darker);
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
 }
