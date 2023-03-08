@@ -31,7 +31,7 @@
     <!---------------------------------------------------------HOME----------------------------------------------------------------->
 
     <section id="home">
-      <div class="homeContainer">
+      <div id="homeContainer" class="homeContainer">
         <div class="homeLeft">
           <div class="titleAndImage">
             <div class="leftImage">
@@ -64,7 +64,7 @@
     <!---------------------------------------------------------HOME----------------------------------------------------------------->
 
     <section id="problem">
-      <div class="homeContainer2">
+      <div  id="problemContainer"  class="homeContainer">
         <div class="homeLeft">
           <p id="title" class="title">Introdução 2</p>
           <p>
@@ -75,29 +75,26 @@
     </section>
 
 
-    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+    <!---------------------------------------------------------IMAGES----------------------------------------------------------------->
 
     <section id="images">
-      <div class="imagesContainer">
+      <div  id="imagesContainer"  class="imagesContainer">
         <h1 class="imagesTitle">Interfaces</h1>
-        <div class="slideshow-container fade">
+        <div id="images-content" class="slideshow-container">
           
           <div>
 
               <div class="Containers">
-                <div class="MessageInfo"><h4>1 / 3</h4></div>
                 <img src="assets/images/web-login.png" style="width:100%">
                 <div class="Info"><h4>Tela de Login</h4></div>
               </div>
             
               <div class="Containers">
-                <div class="MessageInfoInv"><h4>2 / 3</h4></div>
                 <img src="assets/images/web-patients.png" style="width:100%">
                 <div class="Info"><h4>Tela de pacientes</h4></div>
               </div>
             
               <div class="Containers">
-                <div class="MessageInfoInv"><h4>3 / 3</h4></div>
                 <img src="assets/images/web-profile.png" style="width:100%">
                 <div class="Info"><h4>Tela dos horários do profissional</h4></div>
               </div>
@@ -117,6 +114,50 @@
           </div>
       </div>
     </section>
+
+
+
+    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+
+    <section id="refe">
+      <div class="homeContainer2">
+        <div class="homeLeft">
+          <p id="title" class="title">Introdução 2</p>
+          <p>
+            Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!---------------------------------------------------------FOOTER----------------------------------------------------------------->
+
+    <footer>
+      <div class="footer">
+        <div class="footerInfos">
+          <div class="university">
+            <p id="categoryTitle">Universidade Estadual de Ponta Grossa</p>
+            <p>Engenharia de Computação</p>
+            <p>Sistemas Operacionais</p>
+          </div>
+          <div class="devs">
+            <p id="categoryTitle">Desenvolvedores</p>
+            <ul>
+              <li><a target="_blank" href="https://www.linkedin.com/in/marcos-renan-krul-ba8119180/">Marcos Renan Krul</a></li>
+            </ul>
+            <ul>
+              <li><a target="_blank" href="https://www.linkedin.com/in/renato-ruppel-1a1538156/">Renato Cristiano Ruppel</a></li>
+            </ul>
+          </div>
+          <div class="professor">
+            <p id="categoryTitle">Professor Responsável</p>
+            <p>Dierone Cesar Foltran Jr.</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
 
 
 

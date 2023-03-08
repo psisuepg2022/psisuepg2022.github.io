@@ -59,3 +59,17 @@ function SlideShow(n) {
   slides[slidePosition-1].style.display = "block";
   circles[slidePosition-1].className += " enable";
 } 
+
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      entry.target.classList.add('homeAppear');
+    }
+  });
+}, { rootMargin: '-100px' });
+
+observer.observe(document.getElementById('homeContainer'));
+observer.observe(document.getElementById('problemContainer'));
+observer.observe(document.getElementById('imagesContainer'));
