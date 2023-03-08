@@ -27,7 +27,7 @@ $(document).ready(function(){
     
       $([document.documentElement, document.body]).animate({
         scrollTop: $(this.hash).offset().top - 60
-    }, 500);
+    }, 300);
   });
 });
 
@@ -65,11 +65,12 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     // If the element is visible
     if (entry.isIntersecting) {
-      entry.target.classList.add('homeAppear');
+      entry.target.classList.add('sectionAppear');
+      entry.target.classList.remove('hidden');
     }
   });
 }, { rootMargin: '-100px' });
 
 observer.observe(document.getElementById('homeContainer'));
-observer.observe(document.getElementById('problemContainer'));
+observer.observe(document.getElementById('aboutContainer'));
 observer.observe(document.getElementById('imagesContainer'));

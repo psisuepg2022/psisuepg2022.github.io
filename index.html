@@ -19,14 +19,16 @@
     <img src="assets/images/PSIS-Logo-Transparente.png" />
     <div class="container">
       <ul>
-        <li class="home active"><a href="#home">Introdução</a></li>
-        <li class="problem"><a href="#problem">Problema</a></li>
-        <li class="images"><a href="#images">Código</a></li>
+        <li class="home active"><a href="#home">PSIS</a></li>
+        <li class="about"><a href="#about">Sobre o sistema</a></li>
+        <li class="images"><a href="#images">Interfaces</a></li>
         <li class="video"><a href="#video">Vídeo</a></li>
         <li class="bibliography"><a href="#bibliography">Referências</a></li>
       </ul>
     </div>
   </nav>
+
+  <div class="homeShape"></div>
 
     <!---------------------------------------------------------HOME----------------------------------------------------------------->
 
@@ -45,10 +47,6 @@
             <p>
               Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
               <span>Rastreabilidade</span> completa de funcionários e pacientes.
-              Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
-              <span>Rastreabilidade</span> completa de funcionários e pacientes.
-              Aumente a <span>produtividade</span> da sua clínica através do agendamento <span>integrado</span>.
-              <span>Rastreabilidade</span> completa de funcionários e pacientes.
             </p>
 
           </div>
@@ -61,15 +59,25 @@
     </section>
 
 
-    <!---------------------------------------------------------HOME----------------------------------------------------------------->
+    <!---------------------------------------------------------ABOUT----------------------------------------------------------------->
 
-    <section id="problem">
-      <div  id="problemContainer"  class="homeContainer">
-        <div class="homeLeft">
-          <p id="title" class="title">Introdução 2</p>
-          <p>
-            Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
-          </p>
+    <section id="about">
+      <div id="aboutContainer" class="aboutContainer hidden">
+        <h1 class="aboutTitle">Sobre o sistema</h1>
+        <div class="aboutContent">
+          <div class="aboutLeft">
+            <p id="title" class="title">Sobre o sistema</p>
+            <p>
+              Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
+            </p>
+          </div>
+          <div class="aboutRight">
+            <p id="title" class="title">Sobre o sistema</p>
+            <p>
+              Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -78,7 +86,7 @@
     <!---------------------------------------------------------IMAGES----------------------------------------------------------------->
 
     <section id="images">
-      <div  id="imagesContainer"  class="imagesContainer">
+      <div  id="imagesContainer"  class="imagesContainer hidden">
         <h1 class="imagesTitle">Interfaces</h1>
         <div id="images-content" class="slideshow-container">
           
@@ -120,7 +128,7 @@
     <!---------------------------------------------------------HOME----------------------------------------------------------------->
 
     <section id="refe">
-      <div class="homeContainer2">
+      <div class="homeContainer2 hidden">
         <div class="homeLeft">
           <p id="title" class="title">Introdução 2</p>
           <p>

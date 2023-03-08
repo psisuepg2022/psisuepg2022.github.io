@@ -49,7 +49,7 @@ body {
 }
 
 
-section:not(#images) {
+section:not(#images, #home) {
   height: 100%;
   width: 100%;
   display: flex;
@@ -69,7 +69,7 @@ nav {
   align-items: center;
   height: 60px;
   z-index: 9;
-  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.48);
+  /* box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.48); */
 }
 
 nav img {
@@ -135,16 +135,40 @@ nav .container ul li.active a {
   color: #FFF;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /********************************************************* HOME *******************************************************************/
 
+#home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  background: transparent;
+  justify-self: center;
+  position: relative;
+}
+
 .homeContainer {
-  padding-top: 60px;
   display: flex;
   height: calc(100vh - 60px) !important;
-  max-width: 90%;
+  max-width: 85%;
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  border-left: #000 solid 1px;
+}
+
+.homeShape {
+  clip-path: polygon(0 0, 100% 34%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 100% 34%, 100% 0);
+  background: linear-gradient(270deg, var(--primary), var(--secondary));
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .homeLeft {
@@ -153,7 +177,7 @@ nav .container ul li.active a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex: 3;
 }
 
@@ -174,7 +198,7 @@ nav .container ul li.active a {
   width: 90%;
 }
 
-.homeAppear {
+.sectionAppear {
   animation-name: homeImage;
   -webkit-animation-name: homeImage;
   -webkit-animation-duration: 2s;
@@ -238,9 +262,9 @@ nav .container ul li.active a {
   flex: 3;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 40px;
 }
-
 
 .homeContainer p:not(#title) {
   font-size: 1.6rem;
@@ -262,31 +286,46 @@ nav .container ul li.active a {
   width: auto;
 }
 
+/********************************************************* ABOUT *******************************************************************/
 
-.title {
-  font-size: 3.2rem;
-  padding: 2rem 0;
-}
-
-.text {
-  font-size: 1.6rem;
-  text-align: justify;
-  text-indent: 3rem;
-}
-
-
-.homeContainer2 {
-  padding-top: 60px; 
-  background-color: #000;
+.aboutContainer {
   display: flex;
-  height: calc(100vh - 60px);
-  max-width: 90%;
-  flex: 1;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10rem;
+  height: calc(100vh - 60px) !important;
+  max-width: 85%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+  border-left: #000 solid 1px;
 }
 
+.aboutContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aboutTitle {
+  font-size: 3rem;
+  color: var(--primary);
+  font-weight: 300;
+}
+
+.aboutLeft {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  background-color: #F00;
+}
+
+.aboutRight {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  background-color: #000;
+}
 
 /********************************************************* IMAGES *******************************************************************/
 
@@ -301,16 +340,16 @@ nav .container ul li.active a {
 * {box-sizing:border-box}
 
 .imagesContainer {
-  width: 90%;
+  width: 85%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-left: #000 solid 1px;
 }
 
-/* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
 }
@@ -321,7 +360,6 @@ nav .container ul li.active a {
   font-weight: 300;
 }
 
-/* Make the images invisible by default */
 .Containers {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.48);
 
