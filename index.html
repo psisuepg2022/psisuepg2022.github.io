@@ -24,8 +24,6 @@
         <li class="home active"><a href="#home">Bem-vindo</a></li>
         <li class="about"><a href="#about">Sobre</a></li>
         <li class="images"><a href="#images">Interfaces</a></li>
-        <li class="video"><a href="#video">Vídeo</a></li>
-        <li class="bibliography"><a href="#bibliography">Referências</a></li>
       </ul>
     </div>
   </nav>
@@ -70,43 +68,67 @@
         <div class="aboutContent">
           <div class="aboutLeft">
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Concepção</p>
+                  <i class="fa-solid fa-lightbulb fa-2x aboutIcons"></i>
+              </div>
               <p class="aboutText">
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                O <span>PSIS</span> foi concebido para atender à demanda da matéria Projeto de Software, do curso de Engenharia de Computação. Disciplina que exigia o desenvolvimento
+                de um sistema computacional contendo <span>interfaces para interação</span>, <span>modelagem de banco de dados</span> e <span>regras de negócio definidas</span>,
+                além de todo o processo possuir um <span>cliente real</span>.
               </p>
             </div>
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
-              <i class="fa-solid fa-calendar-check aboutIcons fa-4x"></i>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Ideia geral</p>
+                <i class="fa-solid fa-calendar-check aboutIcons fa-2x"></i>
+              </div>
               <p class="aboutText">
-
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                Tendo o cliente e analisando as suas necessidades, os principais objetivos mapeados para o projeto foram: Um sistema destinado à clínicas de psicologia
+                que permitisse o cadastro de <span>pacientes</span>, <span>funcionários</span> e <span>profissionais</span>, e que, por meio da interação destas três entidades permitisse o agendamento
+                de consultas.
               </p>
             </div>
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Interação</p>
+                <i class="fa-solid fa-users fa-2x aboutIcons"></i>
+              </div>
               <p class="aboutText">
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                Identificando quem seriam os usuários do sistema, este foi construído em modelo de papéis e permissões. Existem três usuários que interagem diretamente com o sistema: <span>Administrador</span>,
+                tendo o nível mais elevado de permissões, <span>funcionário</span>, que tem o escopo limitado ao gerenciamento de pacientes e consultas, e <span>profissional</span>, que gerencia sua agenda e seus pacientes.
               </p>
             </div>
           </div>
           <div class="aboutRight">
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Permissões</p>
+                <i class="fa-solid fa-eye fa-2x aboutIcons"></i>
+              </div>
               <p class="aboutText">
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                Devido ao modelo de papéis e permissões, o sistema garante que um tipo de usuário não acesse informações de outro tipo, por exemplo: <span>Somente um profissional</span>
+                 poderá concluir a consulta e ter acesso às anotações sobre seus pacientes, uma medida imprescindível para o <span>sigilo médico-paciente</span>.
               </p>
             </div>
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Horários de atendimento</p>
+                <i class="fa-solid fa-clock fa-2x aboutIcons"></i>
+              </div>
               <p class="aboutText">
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                Os <span>profissionais</span> tem a possibilidade de personalizar seus horários de atendimento para <span>cada dia da semana</span>, de forma recorrente, ou ainda, em caso de imprevistos,
+                adicionar restrições para <span>horários e dias específicos</span>.
               </p>
             </div>
             <div>
-              <p class="aboutSubtitle">Sobre o sistema</p>
+              <div class="aboutIconsAndText">
+                <p class="aboutSubtitle">Acompanhamento</p>
+                <i class="fa-solid fa-hand-holding-medical aboutIcons fa-2x"></i>
+              </div>
               <p class="aboutText">
-                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+                Além do agendamento de consultas, o profissional responsável por um paciente, ao concluir a consulta, pode adicionar <span>anotações</span> sobre esta por meio de um editor de texto 
+                integrado, tendo, posteriormente em sua visão o <span>histórico de consultas e anotações</span> realizadas para seus pacientes.
               </p>
             </div>
           </div>
