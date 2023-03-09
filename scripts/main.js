@@ -23,6 +23,7 @@ window.addEventListener('scroll', () => {
 
 $(document).ready(function(){
   $("a").on('click', function(event) {
+    if (event.currentTarget.id === 'links' || event.currentTarget.id === 'arrow') return;
     event.preventDefault();
     
       $([document.documentElement, document.body]).animate({
@@ -56,7 +57,9 @@ function SlideShow(n) {
   for (i = 0; i < circles.length; i++) {
       circles[i].className = circles[i].className.replace(" enable", "");
   }
-  slides[slidePosition-1].style.display = "block";
+  slides[slidePosition-1].style.display = "flex";
+  const currentSlide = slides[slidePosition-1].children[0];
+  currentSlide.classList.add('anim')
   circles[slidePosition-1].className += " enable";
 } 
 

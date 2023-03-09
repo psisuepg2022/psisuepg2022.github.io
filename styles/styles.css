@@ -49,7 +49,7 @@ body {
 }
 
 
-section:not(#images, #home) {
+section:not(#images, #home, #about) {
   height: 100%;
   width: 100%;
   display: flex;
@@ -155,7 +155,7 @@ nav .container ul li.active a {
 .homeContainer {
   display: flex;
   height: calc(100vh - 60px) !important;
-  max-width: 85%;
+  max-width: 80%;
   justify-content: center;
   align-items: center;
   gap: 5rem;
@@ -288,14 +288,25 @@ nav .container ul li.active a {
 
 /********************************************************* ABOUT *******************************************************************/
 
+#about {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  background: transparent;
+  justify-self: center;
+  position: relative;
+}
+
 .aboutContainer {
   display: flex;
   height: calc(100vh - 60px) !important;
-  max-width: 85%;
+  max-width: 80%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 5rem;
+  gap: 4rem;
   border-left: #000 solid 1px;
 }
 
@@ -305,6 +316,17 @@ nav .container ul li.active a {
   height: 100%;
   justify-content: center;
   align-items: flex-start;
+  gap: 5rem;
+  padding: 0 3rem 0 3rem;
+}
+
+.aboutShape {
+  clip-path: polygon(110% 0, 100% 110%, 0 100%, 0 5%);
+  -webkit-clip-path: polygon(110% 0, 100% 110%, 0 100%, 0 5%);
+  background: linear-gradient(270deg, var(--primary), var(--secondary));
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .aboutTitle {
@@ -315,16 +337,32 @@ nav .container ul li.active a {
 
 .aboutLeft {
   height: 100%;
-  flex: 1;
-  display: flex;
-  background-color: #F00;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .aboutRight {
   height: 100%;
-  flex: 1;
-  display: flex;
-  background-color: #000;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.aboutSubtitle {
+  color: var(--primary);
+  font-size: 1.8rem;
+  text-align: justify;
+  font-weight: 600;
+}
+
+.aboutText {
+  color: var(--primary);
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.aboutIcons {
+  color: var(--primary);
 }
 
 /********************************************************* IMAGES *******************************************************************/
@@ -340,7 +378,7 @@ nav .container ul li.active a {
 * {box-sizing:border-box}
 
 .imagesContainer {
-  width: 85%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -361,9 +399,12 @@ nav .container ul li.active a {
 }
 
 .Containers {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.48);
-
   background: transparent;
+}
+
+.Containers img {
+  
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
 }
 
 /* forward & Back buttons */
@@ -381,12 +422,18 @@ nav .container ul li.active a {
   transition: 0.4s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
+  border-right: 1px var(--primary) solid;
+  border-top: 1px var(--primary) solid;
+  border-bottom: 1px var(--primary) solid;
 }
+
 
 /* Place the "forward button" to the right */
 .forward {
   right: 0;
   border-radius: 4px 0 0 4px;
+  border-left: 1px var(--primary) solid;
+  border-right: none;
 }
 
 /*when the user hovers,add a black background with some little opacity */
@@ -431,31 +478,11 @@ nav .container ul li.active a {
   background-color: var(--darker);
 }
 
-/* Faint animation */
-.imageFade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.4s;
-  animation-name: fade;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fade {
-  0% {opacity: .5}
-  100% {opacity: 2}
-}
-
-@keyframes fade {
-  0% {opacity: .5}
-  100% {opacity: 2}
-}
-
 .anim {
-  animation-name: cssAnimation;
-  -webkit-animation-name: cssAnimation;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  animation-name: imageSlide;
+  -webkit-animation-name: imageSlide;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
@@ -464,27 +491,25 @@ nav .container ul li.active a {
   animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes cssAnimation {
+@-webkit-keyframes imageSlide {
   0% {
-    -webkit-transform: rotate(0deg) scale(1) skew(0deg);
+    -webkit-transform: rotate(0deg) scale(0.98) skew(0deg);
+    opacity: .5;
   }
-  25% {
-    -webkit-transform: rotate(0deg) scale(1.1) skew(0deg);
-  }
-  50% {
+  100% {
     -webkit-transform: rotate(0deg) scale(1) skew(0deg);
+    opacity: 1;
   }
 }
 
-@keyframes cssAnimation {
+@keyframes imageSlide {
   0% {
-    -webkit-transform: rotate(0deg) scale(1) skew(0deg);
+    -webkit-transform: rotate(0deg) scale(0.98) skew(0deg);
+    opacity: .5;
   }
-  25% {
-    -webkit-transform: rotate(0deg) scale(1.1) skew(0deg);
-  }
-  50% {
+  100% {
     -webkit-transform: rotate(0deg) scale(1) skew(0deg);
+    opacity: 1;
   }
 }
 
@@ -492,68 +517,88 @@ nav .container ul li.active a {
 /****************************************************** FOOTER *****************************************************************/
 
 
-.footer {
+footer {
   height: 300px;
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(270deg, var(--primary), var(--secondary));
+  justify-content: space-around;
+  background: var(--darker);
   width: 100%;
   padding: 2rem 4rem;
-  color: rgb(218, 218, 218);
-  font-size: 1.3rem;
   position: relative;
 }
 
-.footerInfos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
+.appContents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
 }
 
-#categoryTitle {
-  font-weight: 700;
-  color: rgb(218, 218, 218);
-  font-size: 1.6rem;
-  margin-bottom: 20px;
+.appContents p {
+  color: #EEEEEE;
+  font-size: 1.4rem;
 }
 
-.footerInfos p {
-  text-align: center;
-  margin: 5px;
-  font-size: 1.3rem;
-  color: rgb(218, 218, 218);
+.appContents a {
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.university p:not(#categoryTitle) {
-  padding: 2px;
-} 
+
+.footerApp {
+  display: flex;
+  justify-content: center;
+}
+
+.footerApp img {
+  height: 40px;
+  width: auto;
+}
+
+.footerApp h5 {
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.devs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  color: #FFF;
+  font-weight: 600;
+}
 
 .devs ul li {
   list-style: none;
-  padding: 5px;
-  text-align: center;
 }
 
-.devs ul li a {
-  color: rgb(218, 218, 218);
-  font-size: 1.3rem;
+.psisgit {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  position: relative;
-  padding: 5px;
+  gap: 10px;
 }
 
-.devs ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: #00E5B0;
-  transition: all 300ms ease-in-out;
+.psisgit:hover {
+  cursor: pointer;
 }
 
-.devs ul li a:hover::after {
-  left: 0;
-  width: 100%;
+.devs a {
+  text-decoration: none;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+}
+
+.devs p {
+  font-size: 1.2rem;
+  padding-left: 10px;
 }

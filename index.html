@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="https://kit.fontawesome.com/e6ab8eedd1.js" crossorigin="anonymous"></script>
   <title>PSIS - Apresentação</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/PSIS-Logo-Invertido-Transparente.png">
 </head>
 <body id="body">
   
@@ -19,8 +21,8 @@
     <img src="assets/images/PSIS-Logo-Transparente.png" />
     <div class="container">
       <ul>
-        <li class="home active"><a href="#home">PSIS</a></li>
-        <li class="about"><a href="#about">Sobre o sistema</a></li>
+        <li class="home active"><a href="#home">Bem-vindo</a></li>
+        <li class="about"><a href="#about">Sobre</a></li>
         <li class="images"><a href="#images">Interfaces</a></li>
         <li class="video"><a href="#video">Vídeo</a></li>
         <li class="bibliography"><a href="#bibliography">Referências</a></li>
@@ -62,20 +64,51 @@
     <!---------------------------------------------------------ABOUT----------------------------------------------------------------->
 
     <section id="about">
+      <!-- <div class="aboutShape"></div> -->
       <div id="aboutContainer" class="aboutContainer hidden">
-        <h1 class="aboutTitle">Sobre o sistema</h1>
+        <h1 class="aboutTitle">Sobre o PSIS</h1>
         <div class="aboutContent">
           <div class="aboutLeft">
-            <p id="title" class="title">Sobre o sistema</p>
-            <p>
-              Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
-            </p>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <p class="aboutText">
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <i class="fa-solid fa-calendar-check aboutIcons fa-4x"></i>
+              <p class="aboutText">
+
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <p class="aboutText">
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
           </div>
           <div class="aboutRight">
-            <p id="title" class="title">Sobre o sistema</p>
-            <p>
-              Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. Assim, um processo pode alterar a informação que estava sendo compartilhada com outro processo. No contexto do problema, apenas a operação de escrita gera seção crítica, visto que esta operação precisa carregar o valor, alterar, e salvá-lo novamente, permitindo que, no intervalo das etapas, outro processo altere a informação. A operação de leitura, por sua vez, não gera seção crítica, visto que só realiza o carregamento da informação. 
-            </p>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <p class="aboutText">
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <p class="aboutText">
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
+            <div>
+              <p class="aboutSubtitle">Sobre o sistema</p>
+              <p class="aboutText">
+                Antes de entender o problema, é interessante compreender o conceito de <span>região crítica, ou seção crítica</span>, onde vários processos compartilham um mesmo recurso e os seus estados são desconhecidos entre si. 
+              </p>
+            </div>
           </div>
 
         </div>
@@ -87,7 +120,7 @@
 
     <section id="images">
       <div  id="imagesContainer"  class="imagesContainer hidden">
-        <h1 class="imagesTitle">Interfaces</h1>
+        <h1 class="imagesTitle">Interfaces - Principais telas</h1>
         <div id="images-content" class="slideshow-container">
           
           <div>
@@ -96,10 +129,20 @@
                 <img src="assets/images/web-login.png" style="width:100%">
                 <div class="Info"><h4>Tela de Login</h4></div>
               </div>
+
+              <div class="Containers">
+                <img src="assets/images/web-agenda.png" style="width:100%">
+                <div class="Info"><h4>Tela de agendamento</h4></div>
+              </div>
             
               <div class="Containers">
                 <img src="assets/images/web-patients.png" style="width:100%">
                 <div class="Info"><h4>Tela de pacientes</h4></div>
+              </div>
+
+              <div class="Containers">
+                <img src="assets/images/web-notes.png" style="width:100%">
+                <div class="Info"><h4>Tela de anotações para paciente</h4></div>
               </div>
             
               <div class="Containers">
@@ -108,8 +151,8 @@
               </div>
             
               <!-- Back and forward buttons -->
-              <a class="back" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+              <a id="arrow" class="back" onclick="plusSlides(-1)">&#10094;</a>
+              <a id="arrow" class="forward" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
             
@@ -118,6 +161,8 @@
               <span class="dots" onclick="currentSlide(1)"></span>
               <span class="dots" onclick="currentSlide(2)"></span>
               <span class="dots" onclick="currentSlide(3)"></span>
+              <span class="dots" onclick="currentSlide(4)"></span>
+              <span class="dots" onclick="currentSlide(5)"></span>
             </div> 
           </div>
       </div>
@@ -142,29 +187,35 @@
     <!---------------------------------------------------------FOOTER----------------------------------------------------------------->
 
     <footer>
-      <div class="footer">
-        <div class="footerInfos">
-          <div class="university">
-            <p id="categoryTitle">Universidade Estadual de Ponta Grossa</p>
-            <p>Engenharia de Computação</p>
-            <p>Sistemas Operacionais</p>
+          <div class="appContents">
+            <div class="footerApp">
+              <img src="assets/images/PSIS-Logo-Transparente.png" />
+              <h5>atient & Scheduling Information System</h5>
+            </div>
+            <a id="links" class="psisgit" target="_blank" href="https://github.com/psisuepg2022">
+              <i style="color: #FFF;" class="fa-brands fa-github fa-2x" ></i>
+              <p>psisuepg2022</p>
+            </a>
+            <a id="links" class="psisgit" target="_blank" href="https://github.com/psisuepg2022">
+              <i style="color: #FFF;" class="fa-sharp fa-solid fa-envelope fa-2x"></i>
+              <p>psisuepg2022@gmail.com</p>
+            </a>
           </div>
           <div class="devs">
-            <p id="categoryTitle">Desenvolvedores</p>
+            <h4 class="categoryTitle">Desenvolvedores</h4>
             <ul>
-              <li><a target="_blank" href="https://www.linkedin.com/in/marcos-renan-krul-ba8119180/">Marcos Renan Krul</a></li>
+              <li><a id="links" target="_blank" href="https://www.linkedin.com/in/marcos-renan-krul-ba8119180/">
+                 <i class="fa-brands fa-linkedin fa-2x"></i>
+                 <p>Marcos Renan Krul</p>
+                </a></li>
             </ul>
             <ul>
-              <li><a target="_blank" href="https://www.linkedin.com/in/renato-ruppel-1a1538156/">Renato Cristiano Ruppel</a></li>
+              <li><a id="links" target="_blank" href="https://www.linkedin.com/in/renato-ruppel-1a1538156/">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+                <p>Renato Cristiano Ruppel</p>
+              </a></li>
             </ul>
           </div>
-          <div class="professor">
-            <p id="categoryTitle">Professor Responsável</p>
-            <p>Dierone Cesar Foltran Jr.</p>
-          </div>
-
-        </div>
-      </div>
     </footer>
 
 
