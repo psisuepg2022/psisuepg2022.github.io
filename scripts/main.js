@@ -76,4 +76,5 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.getElementById('homeContainer'));
 observer.observe(document.getElementById('aboutContainer'));
+observer.observe(document.getElementById('aboutUsContainer'));
 observer.observe(document.getElementById('imagesContainer'));

@@ -49,17 +49,6 @@ body {
 }
 
 
-section:not(#images, #home, #about) {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-  background: transparent;
-  justify-self: center;
-}
-
-
 nav {
   position: sticky;
   background: linear-gradient(270deg, var(--primary), var(--secondary));
@@ -159,7 +148,7 @@ nav .container ul li.active a {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  /* border-left: #000 solid 1px; */
+  border-left: #000 solid 1px; 
 }
 
 .homeShape {
@@ -307,7 +296,7 @@ nav .container ul li.active a {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
-  /* border-left: #000 solid 1px; */
+  border-left: #000 solid 1px; 
 }
 
 .aboutContent {
@@ -329,13 +318,13 @@ nav .container ul li.active a {
 .aboutLeft {
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 5fr 5fr 5fr 1fr;
 }
 
 .aboutRight {
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 5fr 5fr 5fr 1fr;
 }
 
 .aboutSubtitle {
@@ -348,7 +337,7 @@ nav .container ul li.active a {
 .aboutText {
   color: var(--primary);
   text-align: justify;
-  font-size: 1.4rem;
+  font-size: 1.3rem !important;
   font-weight: 400;
   padding-top: 1rem;
   text-indent: 4rem;
@@ -368,6 +357,148 @@ nav .container ul li.active a {
   gap: 1rem;
 }
 
+/********************************************************* ABOUT US *******************************************************************/
+
+#aboutUs {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+.aboutUsContainer {
+  display: flex;
+  height: calc(100vh - 60px) !important;
+  max-width: 80%;
+  width: 80% !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  border-left: #000 solid 1px; 
+  border-right: #000 solid 1px; 
+}
+
+.aboutDevs {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 0 3rem 0 3rem;
+}
+
+.aboutDev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutDevProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(270deg, var(--primary), var(--darker));
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+}
+
+.aboutUsEntry {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUsEntryText {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: justify;
+  padding: 0 3rem 0 3rem;
+  color: var(--primary);
+  text-indent: 4rem;
+} 
+
+.aboutUsEntryText span {
+  font-weight: 600;
+}
+
+.aboutDevsProfilePic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutDevsProfilePic img {
+  height: 195px;
+  width: 195px;
+  border-radius: 50%;
+}
+
+.aboutDevsProfileName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFF;
+  padding-left: 1rem;
+}
+
+.aboutDevTitle {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.aboutDevTitle span {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.aboutDevLinks {
+  display: flex;
+  margin-top: 3rem;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aboutDevLinks a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a.tooltip {
+  position:relative;
+}
+
+a.tooltip:after {
+  background-color:rgba(0, 0, 0, .6);
+  color: white;
+  box-sizing:border-box;
+  content: attr(data-title);
+  display:none;
+  padding:5px;
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -70px;
+  z-index: 3;
+  box-shadow: 0 0 2px var(--text);
+  border-radius: 10px;
+}
+
+a.tooltip:hover:after {
+  display: flex;
+}
 
 /********************************************************* IMAGES *******************************************************************/
 
@@ -522,26 +653,26 @@ nav .container ul li.active a {
 
 
 footer {
-  height: 300px;
+  height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background: var(--darker);
-  width: 100%;
+  width: 100% !important;
   padding: 2rem 4rem;
   position: relative;
 }
 
 .appContents {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   gap: 1rem;
 }
 
 .appContents p {
   color: #EEEEEE;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .appContents a {
@@ -556,13 +687,13 @@ footer {
 }
 
 .footerApp img {
-  height: 40px;
+  height: 30px;
   width: auto;
 }
 
 .footerApp h5 {
   color: #FFF;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
@@ -605,4 +736,14 @@ footer {
 .devs p {
   font-size: 1.2rem;
   padding-left: 10px;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+}
+
+#links:hover {
+  transform: scale(1.05);
+  transition: 500ms;
 }
