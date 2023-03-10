@@ -31,7 +31,6 @@ html {
 
 body {
   background-color: #FFFFFF;
-  position: relative;
 }
 
 /* width */
@@ -266,8 +265,8 @@ nav .container ul li.active a {
 }
 
 .homeShape {
-  clip-path: polygon(0 0, 100% 34%, 100% 0);
-  -webkit-clip-path: polygon(0 0, 100% 34%, 100% 0);
+  clip-path: polygon(0 0, 100% 50%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 0);
   background: linear-gradient(270deg, var(--primary), var(--secondary));
   width: 100%;
   height: 100%;
@@ -1155,6 +1154,10 @@ footer {
 }
  
 @media (max-width: 800px) {
+  body {
+    position: relative;
+  }
+   
   .aboutDev {
 
     width: 90%;
