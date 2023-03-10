@@ -325,12 +325,14 @@ nav .container ul li.active a {
   height: 100%;
   display: grid;
   grid-template-rows: 5fr 5fr 5fr 1fr;
+  flex: 1;
 }
 
 .aboutRight {
   height: 100%;
   display: grid;
   grid-template-rows: 5fr 5fr 5fr 1fr;
+  flex: 1;
 }
 
 .aboutSubtitle {
@@ -889,9 +891,81 @@ footer {
   .aboutDevTitle {
     font-size: 1.4rem;
   }
+
+  .appContents {
+    width: 95%;
+  }
+
+  .aboutUsEntry {
+    padding-bottom: 2rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  #images {
+    height: 100%;
+  }
+
+  .homeContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .homeContainer p {
+    font-size: 1.6rem !important;
+    text-align: center !important;
+    text-indent: 0 !important;
+  }
+
+  .introText {
+    margin-top: 20px;
+  }
+
+  .homeLeft {
+    height: auto;
+  }
+
+  .titleAndImage h1 {
+    font-size: 2.6rem !important;
+  }
+
+  .titleAndImage {
+    gap: 0;
+  }
+
+  .leftImage {
+    flex: 3;
+  }
+
+  .leftTitle {
+    flex: 4;
+  }
+
+  .homeShape {
+    display: none;
+  }
+
+  .homeRight {
+    width: 90%;
+    margin-top: 0;
+  }
+
+  .imagesTitle  {
+    padding-bottom: 40px;
+  }
+
+  .imagesContainer {
+    height: 100%;
+  }
+
+  .slideshow-container {
+    padding: 4rem 0;
+  }
+
+  .Info {
+    padding-top: 4rem;
+  }
+
   .aboutUsContainer {
     height: 100% !important;
   }
@@ -905,11 +979,70 @@ footer {
     width: 60%;
     padding: 1rem 0;
   }
+
+  .footerApp img {
+    height: 15px;
+    width: auto;
+  }
+  
+  .footerApp h5 {
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .psisgit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+  }
+  
+  .psisgit p {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  .aboutUsEntry {
+    padding-bottom: 0;
+  }
 }
 
+@media (max-width: 900px) {
+  .aboutContent {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .aboutLeft  {
+    grid-template-rows: 1fr 1fr 1fr;
+    padding:  0 0 2rem 0;
+  }
+
+  .aboutRight {
+    grid-template-rows: 1fr 1fr 1fr;
+    padding:  0 0 2rem 0;
+    gap: 2rem;
+  }
+
+  .aboutDev {
+    width: 70%;
+  }
+}
+ 
 @media (max-width: 800px) {
   .aboutDev {
 
     width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    height: 140px;
+    padding: 0;
+  }
+
+  .appContents {
+    flex-direction: column;
+    width: 100%;
   }
 }
