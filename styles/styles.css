@@ -429,9 +429,10 @@ nav .container ul li.active a {
 }
 
 .aboutTitle {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--primary);
   font-weight: 300;
+  border-bottom: 4px solid var(--primary);
 }
 
 .aboutLeft {
@@ -636,6 +637,7 @@ a.tooltip:hover:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   /* border-left: #000 solid 1px; */
 }
 
@@ -649,6 +651,7 @@ a.tooltip:hover:after {
   font-size: 3rem;
   color: var(--primary);
   font-weight: 300;
+  border-bottom: 4px solid var(--primary);
 }
 
 .Containers {
@@ -771,13 +774,21 @@ a.tooltip:hover:after {
 
 
 footer {
-  height: 60px;
+  height: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column ;
   background: var(--darker);
   width: 100% !important;
-  padding: 2rem 4rem;
   position: relative;
+}
+
+footer h5 {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 .appContents {
@@ -1002,7 +1013,7 @@ footer {
   }
 
   .aboutDevTitle {
-    font-size: 1.4rem;
+    font-size: 1 .4rem;
   }
 
   .appContents {
@@ -1015,12 +1026,12 @@ footer {
 
   
   .aboutTitle {
-    padding-left: 3rem;
+    margin-left: 3rem;
   }
 
   
   .imagesTitle {
-    padding-left: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -1074,7 +1085,7 @@ footer {
   }
 
   .imagesTitle  {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     padding-top: 2rem;
   }
 
@@ -1165,7 +1176,7 @@ footer {
 
   footer {
     flex-direction: column;
-    height: 140px;
+    height: 180px;
     padding: 0;
   }
 
@@ -1212,6 +1223,10 @@ footer {
     align-items: center;
   }
 
+  .Info {
+    top: -40px;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -1222,5 +1237,47 @@ footer {
   
   .slideshow-container {
     padding: 8rem 0;
+  }
+
+  footer {
+    height: 200px;
+  }
+
+  .aboutDev {
+    width: 98%;
+  }
+
+  .aboutDevProfile {
+    flex-direction: column;
+  }
+
+  .aboutDevTitle {
+    font-size: 1.2rem;
+  }
+
+  .aboutDevLinks {
+    width: 70%;
+  }
+
+  .Info {
+    top: -10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .aboutTitle {
+    font-size: 2.6rem;
+  }
+
+  .imagesTitle {
+    font-size: 2.6rem;
+  }
+
+  .aboutDev {
+    width: 100%;
+  }
+
+  .aboutDevs, .aboutUsEntryText, .aboutContent {
+    padding: 0 1rem;
   }
 }
