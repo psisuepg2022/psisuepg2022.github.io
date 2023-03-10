@@ -138,7 +138,7 @@ nav .container ul li.active a {
   top: 0;
   bottom: 0;
   margin: auto;
-  background-color: var(--darker);
+  background-color: var(--primary);
   z-index: 999;
   border-radius: 20px;
 }
@@ -1279,5 +1279,20 @@ footer h5 {
 
   .aboutDevs, .aboutUsEntryText, .aboutContent {
     padding: 0 1rem;
+  }
+
+  .menu {
+    width: 90%;
+  }
+}
+
+@media (max-width: 370px) {
+  .aboutDev {
+    width: 100%;
+  }
+
+  .aboutContent {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
 }
