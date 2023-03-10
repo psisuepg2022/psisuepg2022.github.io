@@ -148,7 +148,7 @@ nav .container ul li.active a {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  border-left: #000 solid 1px; 
+  /* border-left: #000 solid 1px;  */
 }
 
 .homeShape {
@@ -296,7 +296,7 @@ nav .container ul li.active a {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
-  border-left: #000 solid 1px; 
+  /* border-left: #000 solid 1px;  */
 }
 
 .aboutContent {
@@ -378,8 +378,8 @@ nav .container ul li.active a {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
-  border-left: #000 solid 1px; 
-  border-right: #000 solid 1px; 
+  /* border-left: #000 solid 1px; 
+  border-right: #000 solid 1px;  */
 }
 
 .aboutDevs {
@@ -397,16 +397,16 @@ nav .container ul li.active a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(270deg, var(--primary), var(--darker));
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+  border-radius: 10px;
+  padding: 1rem 4rem;
 }
 
 .aboutDevProfile {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(270deg, var(--primary), var(--darker));
-  border-radius: 10px;
-  padding: 1rem 3rem;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
 }
 
 .aboutUsEntry {
@@ -451,14 +451,14 @@ nav .container ul li.active a {
 }
 
 .aboutDevTitle {
-  color: var(--primary);
+  color: #FFF;
   font-size: 1.7rem;
   font-weight: 400;
   margin-top: 2rem;
 }
 
 .aboutDevTitle span {
-  color: var(--primary);
+  color: #FFF;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -482,7 +482,7 @@ a.tooltip {
 
 a.tooltip:after {
   background-color:rgba(0, 0, 0, .6);
-  color: white;
+  color: #FFF;
   box-sizing:border-box;
   content: attr(data-title);
   display:none;
@@ -498,6 +498,10 @@ a.tooltip:after {
 
 a.tooltip:hover:after {
   display: flex;
+}
+
+.aboutUsIcons {
+  color: #FFF;
 }
 
 /********************************************************* IMAGES *******************************************************************/
@@ -720,6 +724,10 @@ footer {
   align-items: center;
   text-decoration: none;
   gap: 10px;
+}
+
+.psisgit p {
+  padding-left: 10px;
 }
 
 .psisgit:hover {
