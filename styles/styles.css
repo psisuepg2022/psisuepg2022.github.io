@@ -25,7 +25,7 @@
 
 html {
   font-family: 'Poppins';
-  font-size: 93.75% ;
+  font-size: 90.75% !important;
   scroll-behavior: smooth !important;
 }
 
