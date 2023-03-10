@@ -19,7 +19,10 @@
 
   <nav>
     <img src="assets/images/PSIS-Logo-Transparente.png" />
-    <div class="container">
+    <div id="shrunkNav" class="shrunkNav">
+      <i onclick="toggleMenu(true)" class="fa-solid fa-bars fa-2x"></i>
+    </div>
+    <div id="navDefault" class="container">
       <ul>
         <li class="home active"><a href="#home">Bem-vindo</a></li>
         <li class="about"><a href="#about">Sobre</a></li>
@@ -28,6 +31,27 @@
       </ul>
     </div>
   </nav>
+
+  <!---------------------------------------------------------MENU----------------------------------------------------------------->
+
+
+    <div id="backdrop" class="backdrop">
+
+    </div>
+
+    <div id="menu" class="menu">
+      <div class="menuContent">
+        <div class="menuClose" >
+          <i onclick="toggleMenu(false)" class="fa-solid fa-xmark fa-3x"></i>
+        </div>
+        <ul>
+          <li class="home active"><a onclick="toggleMenu(false)" href="#home">Bem-vindo</a></li>
+          <li class="about"><a onclick="toggleMenu(false)" href="#about">Sobre</a></li>
+          <li class="aboutUs"><a onclick="toggleMenu(false)" href="#aboutUs">Equipe</a></li>
+          <li class="images"><a onclick="toggleMenu(false)" href="#images">Interfaces</a></li>
+        </ul>
+      </div>
+    </div>
 
   <div class="homeShape"></div>
 
@@ -213,49 +237,47 @@
       <div  id="imagesContainer"  class="imagesContainer hidden">
         <h1 class="imagesTitle">Interfaces</h1>
         <div id="images-content" class="slideshow-container">
-          
           <div>
-
-              <div class="Containers">
-                <img src="assets/images/web-login.png" style="width:100%">
-                <div class="Info"><h4>Tela de Login</h4></div>
-              </div>
-
-              <div class="Containers">
-                <img src="assets/images/web-agenda.png" style="width:100%">
-                <div class="Info"><h4>Tela de agendamento</h4></div>
-              </div>
-            
-              <div class="Containers">
-                <img src="assets/images/web-patients.png" style="width:100%">
-                <div class="Info"><h4>Tela de pacientes</h4></div>
-              </div>
-
-              <div class="Containers">
-                <img src="assets/images/web-notes.png" style="width:100%">
-                <div class="Info"><h4>Tela de anotações para paciente</h4></div>
-              </div>
-            
-              <div class="Containers">
-                <img src="assets/images/web-profile.png" style="width:100%">
-                <div class="Info"><h4>Tela dos horários do profissional</h4></div>
-              </div>
-            
-              <!-- Back and forward buttons -->
-              <a id="arrow" class="back" onclick="plusSlides(-1)">&#10094;</a>
-              <a id="arrow" class="forward" onclick="plusSlides(1)">&#10095;</a>
+            <div class="Containers">
+              <img src="assets/images/web-login.png" style="width:100%">
+              <div class="Info"><h4>Tela de Login</h4></div>
             </div>
-            <br>
-            
-            <!-- The circles/dots -->
-            <div style="text-align:center">
-              <span class="dots" onclick="currentSlide(1)"></span>
-              <span class="dots" onclick="currentSlide(2)"></span>
-              <span class="dots" onclick="currentSlide(3)"></span>
-              <span class="dots" onclick="currentSlide(4)"></span>
-              <span class="dots" onclick="currentSlide(5)"></span>
-            </div> 
+
+            <div class="Containers">
+              <img src="assets/images/web-agenda.png" style="width:100%">
+              <div class="Info"><h4>Tela de agendamento</h4></div>
+            </div>
+          
+            <div class="Containers">
+              <img src="assets/images/web-patients.png" style="width:100%">
+              <div class="Info"><h4>Tela de pacientes</h4></div>
+            </div>
+
+            <div class="Containers">
+              <img src="assets/images/web-notes.png" style="width:100%">
+              <div class="Info"><h4>Tela de anotações para paciente</h4></div>
+            </div>
+          
+            <div class="Containers">
+              <img src="assets/images/web-profile.png" style="width:100%">
+              <div class="Info"><h4>Tela dos horários do profissional</h4></div>
+            </div>
+          
+            <!-- Back and forward buttons -->
+            <a id="arrow" class="back" onclick="plusSlides(-1)">&#10094;</a>
+            <a id="arrow" class="forward" onclick="plusSlides(1)">&#10095;</a>
           </div>
+          <br>
+          
+          <!-- The circles/dots -->
+          <div style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+            <span class="dots" onclick="currentSlide(4)"></span>
+            <span class="dots" onclick="currentSlide(5)"></span>
+          </div> 
+        </div>
       </div>
     </section>
 
@@ -279,5 +301,9 @@
           </div>
     </footer>
     <script src="scripts/main.js"></script>
+
+    
+
+
   </body>
 </html>

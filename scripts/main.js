@@ -78,3 +78,16 @@ observer.observe(document.getElementById('homeContainer'));
 observer.observe(document.getElementById('aboutContainer'));
 observer.observe(document.getElementById('aboutUsContainer'));
 observer.observe(document.getElementById('imagesContainer'));
+
+function toggleMenu (flag) {
+  const menu = document.getElementById('menu');
+  const backdrop = document.getElementById('backdrop');
+  
+  if (flag) {
+    menu.style.display = 'flex';
+    backdrop.style.display = 'flex';
+  } else {
+    menu.style.display = 'none';
+    backdrop.style.display = 'none';
+  }
+}
