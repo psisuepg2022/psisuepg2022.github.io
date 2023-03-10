@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav .container ul li');
+const menuLi = document.querySelectorAll('.menuContent ul li');
 
 window.addEventListener('scroll', () => {
   let current = '';
@@ -19,6 +20,13 @@ window.addEventListener('scroll', () => {
       li.classList.add('active')
     }
   })
+  menuLi.forEach(li => {
+    li.classList.remove('active');
+    if (li.classList.contains(current)) {
+      li.classList.add('active')
+    }
+  })
+  
 })
 
 $(document).ready(function(){
